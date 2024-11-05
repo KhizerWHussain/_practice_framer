@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
+    "firebase": "^11.0.1",
     "framer-motion": "^11.11.9",
     "lenis": "^1.1.14",
     "next": "14.2.15",

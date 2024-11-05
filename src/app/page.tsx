@@ -1,7 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
+// import { requestFcm } from "@/utils/firebase";
 
 // const BasicFramer = dynamic(() => import("@/Components/Basic"), { ssr: false });
 // const Gestures = dynamic(() => import("@/Components/Gestures"), { ssr: false });
@@ -49,6 +50,35 @@ function Home() {
     };
   }, []);
 
+  // const [fcm, setFcm] = useState<any>(null);
+
+  // const getFcm = async () => {
+  //   try {
+  //     if (typeof window !== "undefined") {
+  //       if ("serviceWorker" in navigator) {
+  //         const registration = await navigator.serviceWorker.register(
+  //           "/firebase-messaging-sw.js"
+  //         );
+  //         console.log("Service Worker registered successfully:", registration);
+
+  //         const token = await requestFcm();
+  //         setFcm(token);
+  //         console.log("FCM Token:", token);
+  //       } else {
+  //         console.error("Service Worker not supported in this browser.");
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.log(
+  //       "Error registering service worker or fetching FCM token:",
+  //       error
+  //     );
+  //   }
+  // };
+  // useEffect(() => {
+  //   getFcm();
+  // }, []);
+
   return (
     <div className="w-full h-full">
       {/* <BasicFramer /> */}
@@ -56,6 +86,8 @@ function Home() {
       {/* <AnimationControlls /> */}
       {/* <ViewBased /> */}
       <ScrollBased />
+
+      {/* <p>{fcm}</p> */}
     </div>
   );
 }
